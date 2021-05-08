@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.mauromelo1.dsvendas.dto.SaleDTO;
-import com.mauromelo1.dsvendas.dto.SaleSucessDTO;
+import com.mauromelo1.dsvendas.dto.SaleSuccessDTO;
 import com.mauromelo1.dsvendas.dto.SaleSumDTO;
 import com.mauromelo1.dsvendas.entities.Sale;
 import com.mauromelo1.dsvendas.repositories.SaleRepository;
@@ -37,8 +37,8 @@ public class SaleService {
 	}
 
 	@Transactional(readOnly = true)
-	public List<SaleSucessDTO> sucessGroupedBySeller() {
-		return repository.sucessGroupedBySeller();
+	public List<SaleSuccessDTO> sucessGroupedBySeller() {
+		return repository.successGroupedBySeller();
 	}
 
 }
